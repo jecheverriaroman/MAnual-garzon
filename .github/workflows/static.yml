@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Interactivo del Garzón</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Botones de navegación */
+        .nav-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .nav-buttons button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #45a049;
+        }
+
+        /* Sección de contenido */
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Animación divertida */
+        .content h2 {
+            color: #4CAF50;
+            animation: colorChange 2s infinite;
+        }
+
+        @keyframes colorChange {
+            0% { color: #4CAF50; }
+            50% { color: #333; }
+            100% { color: #4CAF50; }
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    ¡Bienvenido al Manual Interactivo del Garzón!
+</header>
+
+<div class="nav-buttons">
+    <button onclick="showSection('bienvenida')">Bienvenida</button>
+    <button onclick="showSection('descripcion')">Descripción de Cargo</button>
+    <button onclick="showSection('valores')">Valores y Misión</button>
+    <button onclick="showSection('apariencia')">Apariencia Personal</button>
+</div>
+
+<div class="content">
+    <section id="bienvenida" style="display: none;">
+        <h2>¡Bienvenido al Equipo!</h2>
+        <p>Hoy te integras a un grupo de excelencia que busca entregar experiencias espectaculares. ¡Confíamos en ti!</p>
+    </section>
+
+    <section id="descripcion" style="display: none;">
+        <h2>Descripción de Cargo</h2>
+        <p>Tu rol como garzón es fundamental para garantizar la mejor experiencia a nuestros clientes. ¡Tu amabilidad y dedicación marcarán la diferencia!</p>
+    </section>
+
+    <section id="valores" style="display: none;">
+        <h2>Misión y Valores</h2>
+        <p>Estamos obsesionados con los clientes y nos comprometemos a ofrecer un servicio impecable cada día.</p>
+    </section>
+
+    <section id="apariencia" style="display: none;">
+        <h2>Estándares de Apariencia Personal</h2>
+        <p>Una sonrisa brillante y una presentación impecable son clave para representar los valores del equipo.</p>
+    </section>
+</div>
+
+<script>
+    // Función para mostrar las secciones
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.content section');
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+        document.getElementById(sectionId).style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
+
